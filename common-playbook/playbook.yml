@@ -4,18 +4,13 @@
   any_errors_fatal: true
   gather_facts: false
   become: true
-  #become_user: root
-  #become_method: sudo
-
 
   tasks:
 
     - include: playbooks/apache2/main.yml
     - include: playbooks/php/main.yml
-    #- include: playbooks/db/main.yml
-    #- include: playbooks/memcached/main.yml
 
 # Pause for 10 second     
     - name: Pause playbook for configure to install
       pause:
-        seconds: 30
+        seconds: 10
